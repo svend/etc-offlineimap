@@ -1,0 +1,42 @@
+[general]
+accounts = ciffer, uw
+ui = TTY.TTYUI, Noninteractive.Basic, Noninteractive.Quiet
+pythonfile = ~/.offlineimap.py
+maxsyncaccounts = 2
+
+# Ciffer
+
+[Account ciffer]
+localrepository = ciffer-local
+remoterepository = ciffer
+
+[Repository ciffer-local]
+type = Maildir
+localfolders = ~/Maildir
+
+[Repository ciffer]
+type = IMAP
+preauthtunnel = ssh imap.ciffer.net
+nametrans = dovecot_nametrans
+
+# UW
+
+[Account uw]
+localrepository = uw-local
+remoterepository = uw
+
+[Repository uw-local]
+type = Maildir
+localfolders = ~/Maildir-uw
+
+[Repository uw]
+type = IMAP
+remotehost = svends.deskmail.washington.edu
+ssl = yes
+remoteuser = svends
+reference = mail
+nametrans = uw_nametrans
+# Skip mail, which is not a mail folder, and archive folders
+folderfilter = lambda foldername: not re.search('(^mail$|/archive$)', foldername)
+# Include INBOX, which is not under mail
+folderincludes = ['INBOX']
