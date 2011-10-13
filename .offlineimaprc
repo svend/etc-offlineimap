@@ -16,7 +16,7 @@ localfolders = ~/Maildir
 
 [Repository ciffer]
 type = IMAP
-preauthtunnel = ssh imap.ciffer.net
+preauthtunnel = ssh -o "IdentityFile ~/.ssh/id_rsa-imap" imap.ciffer.net MAIL=\$HOME/Maildir /usr/lib/dovecot/imap --exec-mail imap
 nametrans = dovecot_nametrans
 
 # UW
