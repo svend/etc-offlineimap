@@ -1,8 +1,6 @@
 [general]
 accounts = ciffer, uw
-ui = TTY.TTYUI, Noninteractive.Basic, Noninteractive.Quiet
 pythonfile = ~/.offlineimap.py
-maxsyncaccounts = 2
 
 # Ciffer
 
