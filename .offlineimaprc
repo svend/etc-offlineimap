@@ -31,7 +31,6 @@ localfolders = ~/Maildir-gmail
 [Repository gmail]
 type = Gmail
 remoteuser = svend@ciffer.net
-#nametrans = lambda x: 'INBOX.' + x
 readonly = True
 
 # UW
