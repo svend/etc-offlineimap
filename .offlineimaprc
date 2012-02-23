@@ -17,6 +17,22 @@ type = IMAP
 preauthtunnel = ssh -o "IdentityFile ~/.ssh/id_rsa-imap" imap.ciffer.net MAIL=\$HOME/Maildir /usr/lib/dovecot/imap --exec-mail imap
 nametrans = dovecot_nametrans
 
+# Gmail
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Maildir-gmail
+
+[Repository gmail]
+type = Gmail
+remoteuser = svend@ciffer.net
+#nametrans = lambda x: 'INBOX.' + x
+readonly = True
+
 # UW
 
 [Account uw]
