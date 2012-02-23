@@ -1,5 +1,5 @@
 [general]
-accounts = ciffer, uw
+accounts = gmail
 metadata = ~/.cache/offlineimap
 pythonfile = ~/.offlineimap.py
 
