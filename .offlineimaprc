@@ -1,5 +1,6 @@
 [general]
 accounts = ciffer, uw
+metadata = ~/.cache/offlineimap
 pythonfile = ~/.offlineimap.py
 
 # Ciffer
