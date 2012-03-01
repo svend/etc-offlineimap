@@ -23,6 +23,7 @@ nametrans = dovecot_nametrans
 [Account gmail]
 localrepository = gmail-local
 remoterepository = gmail
+presynchook = cd ~/Maildir-gmail && git pull --no-ff
 postsynchook = cd ~/Maildir-gmail && ~/bin/git-autocommit
 
 [Repository gmail-local]
@@ -32,13 +33,14 @@ localfolders = ~/Maildir-gmail
 [Repository gmail]
 type = Gmail
 remoteuser = svend@ciffer.net
-readonly = True
+#readonly = True
 
 # UW
 
 [Account uw]
 localrepository = uw-local
 remoterepository = uw
+postsynchook = cd ~/Maildir-uw && ~/bin/git-autocommit
 
 [Repository uw-local]
 type = Maildir
@@ -55,3 +57,4 @@ nametrans = uw_nametrans
 folderfilter = lambda foldername: not re.search('(^mail$|/archive$)', foldername)
 # Include INBOX, which is not under mail
 folderincludes = ['INBOX']
+readonly = True

@@ -18,3 +18,14 @@ def uw_nametrans( foldername ):
 		return '.'
 	else:
 		return re.sub('^mail/', '.', foldername)
+
+# Translate Gmail IMAP folders to maildir folders
+# - Translate INBOX to "."
+# - Prefix a "." to all other folders
+# TODO: What about / in [Gmail]/Drafts?
+
+def gmail_nametrans( foldername ):
+	if foldername == 'INBOX':
+		return '.'
+	else:
+		return '.' + foldername
