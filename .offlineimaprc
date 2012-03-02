@@ -33,6 +33,7 @@ localfolders = ~/Maildir-gmail
 [Repository gmail]
 type = Gmail
 remoteuser = svend@ciffer.net
+nametrans = gmail_nametrans
 #readonly = True
 
 # UW
