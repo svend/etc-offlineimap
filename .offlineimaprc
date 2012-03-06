@@ -24,6 +24,7 @@ nametrans = dovecot_nametrans
 [Account gmail]
 localrepository = gmail-local
 remoterepository = gmail
+autorefresh=5
 presynchook = cd ~/Maildir-gmail && git pull --no-ff
 postsynchook = cd ~/Maildir-gmail && ~/bin/git-autocommit
 
@@ -42,6 +43,7 @@ nametrans = gmail_nametrans
 [Account uw]
 localrepository = uw-local
 remoterepository = uw
+autorefresh=5
 presynchook = cd ~/Maildir-uw && git pull --no-ff
 postsynchook = cd ~/Maildir-uw && ~/bin/git-autocommit
 
