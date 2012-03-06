@@ -59,4 +59,4 @@ nametrans = uw_nametrans
 folderfilter = lambda foldername: not re.search('(^mail$|/archive$)', foldername)
 # Include INBOX, which is not under mail
 folderincludes = ['INBOX']
-readonly = True
+#readonly = True
