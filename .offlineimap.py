@@ -9,13 +9,13 @@ def dovecot_nametrans( foldername ):
 		return '.' + foldername
 
 # Translate UW IMAP folders to maildir folders
-# - Translate INBOX to "."
+# - Translate INBOX to ""
 # - Strip mail/ and prefix a "." to all other folders
 
 def uw_nametrans( foldername ):
 	import re
 	if foldername == 'INBOX':
-		return '.'
+		return ''
 	else:
 		return re.sub('^mail/', '.', foldername)
 
