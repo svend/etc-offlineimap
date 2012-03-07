@@ -25,12 +25,12 @@ nametrans = dovecot_nametrans
 localrepository = gmail-local
 remoterepository = gmail
 autorefresh=5
-presynchook = cd ~/Maildir-gmail && git pull --no-ff
-postsynchook = cd ~/Maildir-gmail && ~/bin/git-autocommit
+presynchook = cd ~/.local/share/offlineimap/repo/gmail && git pull --no-ff
+postsynchook = cd ~/.local/share/offlineimap/repo/gmail && ~/bin/git-autocommit
 
 [Repository gmail-local]
 type = Maildir
-localfolders = ~/Maildir-gmail
+localfolders = ~/.local/share/offlineimap/repo/gmail
 
 [Repository gmail]
 type = Gmail
@@ -44,12 +44,12 @@ nametrans = gmail_nametrans
 localrepository = uw-local
 remoterepository = uw
 autorefresh=5
-presynchook = cd ~/Maildir-uw && git pull --no-ff
-postsynchook = cd ~/Maildir-uw && ~/bin/git-autocommit
+presynchook = cd ~/.local/share/offlineimap/repo/uw && git pull --no-ff
+postsynchook = cd ~/.local/share/offlineimap/repo/uw && ~/bin/git-autocommit
 
 [Repository uw-local]
 type = Maildir
-localfolders = ~/Maildir-uw
+localfolders = ~/.local/share/offlineimap/repo/uw
 
 [Repository uw]
 type = IMAP
