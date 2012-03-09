@@ -36,6 +36,8 @@ localfolders = ~/.local/share/offlineimap/repo/gmail
 type = Gmail
 remoteuser = svend@ciffer.net
 nametrans = gmail_nametrans
+# Only sync 'All Mail' folder
+folderfilter = lambda foldername: foldername in ['[Gmail]/All Mail']
 #readonly = True
 
 # UW
