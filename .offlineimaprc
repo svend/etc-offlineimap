@@ -25,7 +25,7 @@ nametrans = dovecot_nametrans
 localrepository = gmail-local
 remoterepository = gmail
 autorefresh=5
-presynchook = cd ~/.local/share/offlineimap/repo/gmail && git pull --no-ff
+presynchook = cd ~/.local/share/offlineimap/repo/gmail && git pull
 postsynchook = cd ~/.local/share/offlineimap/repo/gmail && ~/bin/git-autocommit
 
 [Repository gmail-local]
@@ -46,7 +46,7 @@ folderfilter = lambda foldername: foldername in ['[Gmail]/All Mail']
 localrepository = uw-local
 remoterepository = uw
 autorefresh=5
-presynchook = cd ~/.local/share/offlineimap/repo/uw && git pull --no-ff
+presynchook = cd ~/.local/share/offlineimap/repo/uw && git pull
 postsynchook = cd ~/.local/share/offlineimap/repo/uw && ~/bin/git-autocommit
 
 [Repository uw-local]
