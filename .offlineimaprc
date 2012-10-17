@@ -26,7 +26,7 @@ localrepository = gmail-local
 remoterepository = gmail
 autorefresh=5
 presynchook = cd ~/.local/share/offlineimap/repo/gmail && git pull
-postsynchook = cd ~/.local/share/offlineimap/repo/gmail && ~/bin/git-autocommit
+postsynchook = cd ~/.local/share/offlineimap/repo/gmail && nice ionice -c3 ~/bin/git-autocommit
 
 [Repository gmail-local]
 type = Maildir
@@ -47,7 +47,7 @@ localrepository = uw-local
 remoterepository = uw
 autorefresh=5
 presynchook = cd ~/.local/share/offlineimap/repo/uw && git pull
-postsynchook = cd ~/.local/share/offlineimap/repo/uw && ~/bin/git-autocommit
+postsynchook = cd ~/.local/share/offlineimap/repo/uw && nice ionice -c3 ~/bin/git-autocommit
 
 [Repository uw-local]
 type = Maildir
