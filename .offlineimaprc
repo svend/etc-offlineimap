@@ -28,16 +28,16 @@ remoterepository = gmail
 autorefresh=5
 presynchook = 
 	cd /home/svend/mail/ciffer &&
-	~/bin/git-autocommit &&
-	git annex sync &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
 	cd ~/.local/share/offlineimap/repo/gmail &&
-	git annex sync
+	nice ionice -c3 git annex sync
 postsynchook =
 	cd ~/.local/share/offlineimap/repo/gmail &&
-	~/bin/git-autocommit &&
-	git annex sync &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
 	cd /home/svend/mail/ciffer &&
-	git annex sync
+	nice ionice -c3 git annex sync
 
 [Repository gmail-local]
 type = Maildir
@@ -59,16 +59,16 @@ remoterepository = uw
 autorefresh=5
 presynchook =
 	cd /home/svend/mail/uw &&
-	~/bin/git-autocommit &&
-	git annex sync
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync
 	cd ~/.local/share/offlineimap/repo/uw &&
-	git annex sync
+	nice ionice -c3 git annex sync
 postsynchook =
 	cd ~/.local/share/offlineimap/repo/uw &&
-	~/bin/git-autocommit &&
-	git annex sync &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
 	cd /home/svend/mail/uw &&
-	git annex sync
+	nice ionice -c3 git annex sync
 
 [Repository uw-local]
 type = Maildir
