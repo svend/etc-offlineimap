@@ -1,3 +1,4 @@
+# -*- mode: Conf -*-
 [general]
 accounts = gmail, uw
 maxsyncaccounts = 2
