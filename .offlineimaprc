@@ -25,8 +25,18 @@ nametrans = dovecot_nametrans
 localrepository = gmail-local
 remoterepository = gmail
 autorefresh=5
-presynchook = cd ~/.local/share/offlineimap/repo/gmail && nice ionice -c3 git annex sync
-postsynchook = cd ~/.local/share/offlineimap/repo/gmail && nice ionice -c3 ~/bin/git-autocommit && nice ionice -c3 git annex sync
+presynchook = 
+	cd /home/svend/mail/ciffer &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
+	cd ~/.local/share/offlineimap/repo/gmail &&
+	nice ionice -c3 git annex sync
+postsynchook =
+	cd ~/.local/share/offlineimap/repo/gmail &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
+	cd /home/svend/mail/ciffer &&
+	nice ionice -c3 git annex sync
 
 [Repository gmail-local]
 type = Maildir
@@ -46,8 +56,18 @@ folderfilter = lambda foldername: foldername in ['[Gmail]/All Mail']
 localrepository = uw-local
 remoterepository = uw
 autorefresh=5
-presynchook = cd ~/.local/share/offlineimap/repo/uw && nice ionice -c3 git annex sync
-postsynchook = cd ~/.local/share/offlineimap/repo/uw && nice ionice -c3 ~/bin/git-autocommit && nice ionice -c3 git annex sync
+presynchook =
+	cd /home/svend/mail/uw &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync
+	cd ~/.local/share/offlineimap/repo/uw &&
+	nice ionice -c3 git annex sync
+postsynchook =
+	cd ~/.local/share/offlineimap/repo/uw &&
+	nice ionice -c3 ~/bin/git-autocommit &&
+	nice ionice -c3 git annex sync &&
+	cd /home/svend/mail/uw &&
+	nice ionice -c3 git annex sync
 
 [Repository uw-local]
 type = Maildir
